@@ -1,32 +1,110 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <NavBar />
+    <div class="c-content">
+      <router-view />
     </div>
-    <router-view />
+    <Footer />
   </div>
 </template>
 
+<script>
+import Footer from "@/components/Footer.vue";
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  components: {
+    Footer,
+    NavBar,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+:root {
+  --baseline: calc(1rem / 2);
+  --baseline-xs: calc(var(--baseline) * 2);
+  --baseline-s: calc(var(--baseline) * 3);
+  --baseline-m: calc(var(--baseline) * 4);
+  --baseline-l: calc(var(--baseline) * 5);
+  --baseline-xl: calc(var(--baseline) * 6);
+
+  --steel-gray: #1e1d2c;
+  --royal-blue: #2c61e8;
+  --gray-suit: #cac8d3;
+  --danube: #71a7d1;
+
+  --header-height: 8rem;
+  --footer-height: 6.4rem;
+  --content-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
 }
 
-#nav {
-  padding: 30px;
+body {
+  background-color: var(--steel-gray);
+  color: var(--gray-suit);
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: var(--baseline-xs);
+  line-height: 1.5;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-bottom: var(--baseline);
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  color: var(--gray-suit);
+  text-decoration: none;
+  transition: 300ms ease-out;
+}
+
+a:hover,
+a.router-link-exact-active {
+  color: var(--royal-blue);
+  transition: 150ms ease-in;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.c-header {
+  height: var(--header-height);
+}
+
+.c-content {
+  height: var(--content-height);
+  overflow: auto;
+  padding: var(--baseline-s) 0;
+  width: 100%;
+}
+
+.c-content > * {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.c-footer {
+  height: var(--footer-height);
+}
+
+.c-hightlight {
+  color: var(--royal-blue);
 }
 </style>
