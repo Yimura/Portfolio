@@ -67,6 +67,23 @@ p {
   margin-bottom: var(--baseline);
 }
 
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  height: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--gray-suit);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--royal-blue);
+}
+
 a {
   color: var(--gray-suit);
   text-decoration: none;
