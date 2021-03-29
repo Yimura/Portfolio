@@ -112,12 +112,18 @@ export default {
 .c-project {
   border: 1px solid var(--gray-suit);
   border-radius: calc(var(--baseline) / 2);
+  display: flex;
+  flex-direction: column;
   padding: var(--baseline-s) var(--baseline-m);
 }
 
 .c-project__title {
   color: var(--royal-blue);
   margin-bottom: var(--baseline);
+}
+
+.c-project__short {
+  flex-grow: 1;
 }
 
 .c-project__links {
