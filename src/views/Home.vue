@@ -22,12 +22,29 @@
         </div>
       </div>
     </div>
+    <Separator />
+    <div class="c-socials">
+      <h1>Socials</h1>
+      <ul class="c-socials__list">
+        <li v-bind:key="social.url" v-for="social in socials">
+          <a v-bind:href="social.url" target="_blank">
+            <font-awesome-icon :icon="['fab', social.icon]" />
+            {{ social.text }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </article>
 </template>
 
 <script>
+import Separator from "@/components/Separator.vue";
+
 export default {
   name: "Home",
+  components: {
+    Separator,
+  },
   data: () => {
     return {
       skills: [
@@ -72,6 +89,28 @@ export default {
           name: "Python",
           title: "MODERATE",
           mastering: 0.65,
+        },
+      ],
+      socials: [
+        {
+          icon: "discord",
+          text: "Yimura#6969",
+          url: "#",
+        },
+        {
+          icon: "github",
+          text: "Github",
+          url: "http://github.com/Yimura",
+        },
+        {
+          icon: "twitch",
+          text: "Twitch",
+          url: "https://twitch.tv/yimura_",
+        },
+        {
+          icon: "twitter",
+          text: "Twitter",
+          url: "https://twitter.com/Yimura9",
         },
       ],
     };
@@ -121,5 +160,18 @@ export default {
   font-size: 14px;
   font-weight: bold;
   padding: 2px 8px;
+}
+
+.c-socials {
+  text-align: center;
+  margin: var(--baseline-l) 0;
+}
+
+.c-socials__list {
+  list-style: none;
+}
+
+.c-socials__list li {
+  margin-bottom: var(--baseline);
 }
 </style>
