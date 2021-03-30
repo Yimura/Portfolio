@@ -1,0 +1,7 @@
+version: '3'
+services:
+  static_portfolio:
+    container_name: portfolio
+    build: .
+    ports:
+      - 8080:80
