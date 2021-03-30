@@ -81,6 +81,25 @@ export default {
           ],
         },
         {
+          title: "YouTube DL",
+          short:
+            "A YouTube video downloader with included conversion to MP3, OGG and WAV file formats.",
+          links: [
+            {
+              text: "DOCKER",
+              url: "https://hub.docker.com/yimura/ytdl",
+            },
+            {
+              text: "SOURCE",
+              url: "https://github.com/Yimura/node-ytdl-gui",
+            },
+            {
+              text: "WEBSITE",
+              url: "https://ytdl.pieceof.art",
+            },
+          ],
+        },
+        {
           title: "YTScraper",
           short:
             "Lightweight, widely supported and fast YT search scraper with support for channel, stream and video search.",
