@@ -1,9 +1,11 @@
 <template>
   <div class="c-footer">
     <Separator />
-    <pre>
-      <code>people use typescript for everything, wait 10s to compile on each change, and then happily wait to see their portfolio crash because an api returned a string instead of an int</code>
-    </pre>
+    <p class="c-code-block">
+      people use typescript for everything, wait 10s to compile on each change,
+      and then happily wait to see their portfolio crash because an api returned
+      a string instead of an int
+    </p>
     <p>
       <span class="c-hightlight">&#169; 2021</span>
       made by
@@ -26,6 +28,11 @@ export default {
 </script>
 
 <style scoped>
+.c-code-block {
+  font-family: Consolas, "Ubuntu Mono", Ubuntu, monospace;
+  padding: 0 var(--baseline-xs);
+}
+
 .c-footer {
   margin: 0 auto;
   text-align: center;

@@ -29,6 +29,8 @@ export default {
 }
 
 .c-navbar {
+  display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0 var(--baseline-xl);
 }

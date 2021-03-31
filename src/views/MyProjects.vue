@@ -124,8 +124,8 @@ export default {
 .c-projects-wrapper {
   display: grid;
   column-gap: var(--baseline-m);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: var(--baseline-s);
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .c-project {

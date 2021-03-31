@@ -35,7 +35,7 @@ export default {
   --danube: #71a7d1;
 
   --header-height: 8rem;
-  --footer-height: 6.4rem;
+  --footer-height: 0;
   --content-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
@@ -114,7 +114,7 @@ a.router-link-exact-active {
 
 .c-content > * {
   margin: 0 auto;
-  width: 65%;
+  width: 90%;
 }
 
 .c-footer {
@@ -123,5 +123,32 @@ a.router-link-exact-active {
 
 .c-hightlight {
   color: var(--royal-blue);
+}
+
+/**
+ * Normal Screens
+ */
+@media only screen and (min-width: 960px) and (min-height: 500px) {
+  :root {
+    --footer-height: 6.4rem;
+  }
+
+  .c-navbar {
+    display: unset !important;
+    justify-content: unset !important;
+  }
+
+  .c-content > * {
+    width: 60%;
+  }
+}
+
+/**
+ * Ultrawide resolutions
+ */
+@media only screen and (min-width: 2000px) and (min-height: 1100px) {
+  .c-content > * {
+    width: 40%;
+  }
 }
 </style>

@@ -125,6 +125,7 @@ export default {
 
 .c-title > .c-hightlight {
   font-size: var(--baseline-m);
+  white-space: nowrap;
 }
 
 .c-skillset {
