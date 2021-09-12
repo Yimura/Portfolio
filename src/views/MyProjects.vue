@@ -66,6 +66,32 @@ export default {
           ],
         },
         {
+          title: "Injector",
+          short:
+            "A C++ console application that can inject a DLL into a target app with auto update functionality.",
+          links: [
+            {
+              text: "RELEASES",
+              url: "https://github.com/Yimura/Injector/releases",
+            },
+            {
+              text: "SOURCE",
+              url: "https://github.com/Yimura/Injector",
+            },
+          ],
+        },
+        {
+          title: "Node Backend template",
+          short:
+            "NodeJS REST backend template written from scratch with modular support and directory based urls.",
+          links: [
+            {
+              text: "SOURCE",
+              url: "https://github.com/Yimura/Node-Backend",
+            },
+          ],
+        },
+        {
           title: "Soft & Wet",
           short:
             "A Jojo themed bot with many fun commands, image manipulation and much more!",
@@ -87,7 +113,7 @@ export default {
           links: [
             {
               text: "DOCKER",
-              url: "https://hub.docker.com/yimura/ytdl",
+              url: "https://hub.docker.com/r/yimura/ytdl",
             },
             {
               text: "SOURCE",
