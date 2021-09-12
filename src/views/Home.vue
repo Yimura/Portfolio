@@ -14,11 +14,9 @@
               <span class="c-skill__tag">{{ skill.type }}</span>
             </div>
           </div>
-          <progress
-            v-bind:title="skill.title"
-            v-bind:value="skill.mastering"
-            max="1"
-          />
+          <p>
+            {{ skill.description }}
+          </p>
         </div>
       </div>
     </div>
@@ -52,43 +50,63 @@ export default {
           type: "LANGUAGE",
           name: "C++",
           title: "BASIC",
-          mastering: 0.15,
+          description:
+            "Creating modifications for games with DLL injection, simple console applications",
         },
         {
           type: "LANGUAGE",
           name: "C#",
           title: "NOVICE",
-          mastering: 0.35,
+          description:
+            "Making a REST API with repository/services design, MVC and entity frameworks. ",
         },
         {
-          type: "LANGUAGE",
-          name: "CSS / HTML",
-          title: "MODERATE",
-          mastering: 0.75,
-        },
-        {
-          type: "LANGUAGE",
-          name: "JS",
+          type: "SKILL",
+          name: "Docker",
           title: "EXPERT",
-          mastering: 0.95,
+          description:
+            "Custom image creation and deployment of services with docker-compose.",
+        },
+        {
+          type: "SKILL",
+          name: "Fullstack Web",
+          title: "NOVICE",
+          description:
+            "Full stack integration of backend and visualising in an existing design.",
+        },
+        {
+          type: "LANGUAGE",
+          name: "NodeJS",
+          title: "EXPERT",
+          description:
+            "NodeJS is my go-to language when I'd like to create a quick script or a general purpose console application.",
         },
         {
           type: "LANGUAGE",
           name: "Lua",
           title: "MODERATE",
-          mastering: 0.45,
+          description:
+            "I've used this before for scripting some simple game plugins for gmod and FiveM.",
         },
         {
           type: "LANGUAGE",
           name: "PHP",
           title: "MODERATE",
-          mastering: 0.55,
+          description:
+            "A long time ago I used to create some small MySQL web applications but haven't touched it in a while.",
         },
         {
           type: "LANGUAGE",
           name: "Python",
           title: "MODERATE",
-          mastering: 0.65,
+          description:
+            "Won't use this language unless specifically required for the task.",
+        },
+        {
+          type: "FRAMEWORK",
+          name: "VueJS",
+          title: "BASIC",
+          description: "This website was made with VueJS.",
         },
       ],
       socials: [
